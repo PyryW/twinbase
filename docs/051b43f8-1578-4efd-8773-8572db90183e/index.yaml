@@ -1,3 +1,5 @@
+version: '0.1'
+privacy: public
 dt-id: https://dtid.org/051b43f8-1578-4efd-8773-8572db90183e
 hosting-iri: https://PyryW.github.io/twinbase/051b43f8-1578-4efd-8773-8572db90183e
 name: WBAWD310X0PA96693
@@ -5,3 +7,49 @@ description: BMW E92
 baseurl: https://PyryW.github.io/twinbase
 edit: https://github.com/PyryW/twinbase/edit/main/docs/051b43f8-1578-4efd-8773-8572db90183e/index.yaml
 edit-json: https://github.com/PyryW/twinbase/edit/main/docs/051b43f8-1578-4efd-8773-8572db90183e/index.json
+'@context': https://www.w3.org/2019/wot/td/v1
+securityDefinitions:
+  nosec_sc:
+    scheme: nosec
+security: nosec_sc
+properties:
+  steering-angle:
+    title: Steering Angle
+    observable: true
+    minimum: -90
+    maximum: 90
+    type: integer
+    forms:
+    - href: mqtt://mqtt.wec.fi:1883
+      mqv:filter: WBAWD310X0PA96693/KCAN/steering-angle
+      op: observeproperty
+  wheel-speeds:
+    title: Wheel speeds
+    observable: true
+    minimum: 0
+    maximum: 255
+    type: array
+    forms:
+    - href: mqtt://mqtt.wec.fi:1883
+      mqv:filter: WBAWD310X0PA96693/KCAN/wheel-speeds
+      op: observeproperty
+  brake-force:
+    title: Brake Force
+    observable: true
+    minimum: 0
+    maximum: 100
+    type: integer
+    forms:
+    - href: mqtt://mqtt.wec.fi:1883
+      mqv:filter: WBAWD310X0PA96693/KCAN/brake-force
+      op: observeproperty
+  throttle:
+    title: Throttle
+    observable: true
+    minimum: 0
+    maximum: 100
+    type: integer
+    forms:
+    - href: mqtt://mqtt.wec.fi:1883
+      mqv:filter: WBAWD310X0PA96693/KCAN/throttle
+      op: observeproperty
