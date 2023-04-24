@@ -7,7 +7,7 @@
     "description": "BMW E92",
     "baseurl": "https://PyryW.github.io/twinbase",
     "edit": "https://github.com/PyryW/twinbase/edit/main/docs/051b43f8-1578-4efd-8773-8572db90183e/index.yaml",
-    "edit-json": "https://github.com/PyryW/twinbase/edit/main/docs/051b43f8-1578-4efd-8773-8572db90183e/index.json"
+    "edit-json": "https://github.com/PyryW/twinbase/edit/main/docs/051b43f8-1578-4efd-8773-8572db90183e/index.json",
     "@context": "https://www.w3.org/2019/wot/td/v1",
     "securityDefinitions": {
     "nosec_sc": {
