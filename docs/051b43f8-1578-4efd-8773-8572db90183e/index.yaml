@@ -33,6 +33,16 @@ properties:
     - href: mqtt://mqtt.wec.fi:1883
       mqv:filter: WBAWD310X0PA96693/KCAN/wheel-speeds
       op: observeproperty
+  accelerometer:
+    title: Accelerometer
+    observable: true
+    minimum: 0
+    maximum: 255
+    type: array
+    forms:
+    - href: mqtt://mqtt.wec.fi:1883
+      mqv:filter: WBAWD310X0PA96693/KCAN/accelerometer
+      op: observeproperty
   brake-force:
     title: Brake Force
     observable: true
